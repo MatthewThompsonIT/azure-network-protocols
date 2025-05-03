@@ -45,7 +45,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <br />
 
-<h3>Installing and Setting Up Wireshark</h3>
+<h3>Installing and Setting Up Wireshark and Observing ICMP Traffic</h3>
 
 <p>
   
@@ -97,9 +97,75 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <br />
 
+<h3>SSH Filter</h3>
+
 <p>
 
+- Now lets do a SSH filter
+    - In the "filter" bar at the top enter in ssh.
+<img src="https://i.imgur.com/OAbQWhk.png" alt="ssh filter"/>
+
+- From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address)
+    - Open PowerShell, and type: ssh labuser@(private IP address) ex. ssh labuser@10.0.0.5)
+         - Type "yes" when prompted
+         - Enter in the password.
+              - NOTE: When entering in the password it will NOT show up, this is for security reasons. Just type the password and hit enter, you will not be able to see it but it is there.
+<img src="https://i.imgur.com/FBEDqpJ.png" alt="ssh into linux vm"/>
+
+- Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+<img src="https://i.imgur.com/WWDA20b.png" alt="observe ssh traffic"/>
+
+- Exit the SSH connection by typing ‘exit’ and pressing "Enter"
+
+
+</p>
+<br />
+
+<h3>DHCP Filter</h3>
+
+</p>
+
+- Begin by creating a filter for dhcp
+<img src="https://i.imgur.com/9S17Phv.png" alt="dhcp filter"/>
+
+- From the Windows 10 VM, attempt to issue the VM a new IP address from the command line.
+    - Open PowerShell as admin and run: ipconfig /renew
+    - Observe the DHCP traffic appearing in WireShark.
+<img src="https://i.imgur.com/F7eDZdV.png" alt="observe dhcp traffic"/>
+
+<br />
+
+<h3>DNS Filter</h3>
+
+<p>
+
+- Begin by creating a filter for dns
+<img src="https://i.imgur.com/yAkpnsT.png" alt="DNS filter"/>
+
+- From the Windows 10 VM open a command line
+    - Use "nslookup" to find google.com and disney.com’s IP addresses.
+    - Observe the traffic in Wireshark.
+
+<img src="https://i.imgur.com/Pka9Lxb.png" alt="DNS traffic"/>
+<img src="https://i.imgur.com/tmJ0tcX.png" alt="DNS traffic 2"/>
+
+</p>
+
+<h3>RDP Filter</h3>
+
+<p>
+
+- Begin by creating a filter for rdp (tcp.port == 3389)
+    - Observe rdp traffic with Wireshark
+          - There should be consistent traffic since we are currently using the remote desktop protocol to do this whole project in the first place.
+<img src="https://i.imgur.com/6AL8Toc.png" alt="rdp Traffic"/>
+
+    
+</p>
+
 <h3>Cleanup and Uninstallation</h3>
+
+<p>
 
 - Now lets cleanup, we dont want to leave our VM's running as it would cost us money to do so.
       - Once done with the VM's and youre ready to end the day or delete them forever, follow [this tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines?tab=readme-ov-file#cleanupexiting-the-vm) to delete everything so Azure does not keep charging you.
