@@ -45,9 +45,11 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <br />
 
+<h3>Installing and Setting Up Wireshark</h3>
+
 <p>
   
-- Now lets remote into the windows 10 virtual machine. [This tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines) also teaches you how to do that if needed.
+- Now lets remote into the windows 10 virtual machine. [This tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines?tab=readme-ov-file#how-to-connect-to-the-virtual-machine) also teaches you how to do that if needed.
 - On the windows 10 VM Install [Wireshark](https://www.wireshark.org/)
   - Select NPcap 1.79, hit next, skip USBcap... then install.
 <img src="https://i.imgur.com/8pkhaYc.png" alt="Install Wireshark"/>
@@ -60,6 +62,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Retrieve the private IP address of the Ubuntu VM (linux-vm) and attempt to ping it from within the Windows 10 VM
   - This can be found under the Overview tab when selecting the linux-vm
 <img src="https://i.imgur.com/iYHsF3U.png" alt="get ip"/>
+
+- Open up Windows PowerShell (press start and type in PowerShell)
+<img src="https://i.imgur.com/iztTbIC.png" alt="powershell"/>
 </p>
 <p>
   
@@ -70,10 +75,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>
 
+<h3>Cleanup and Uninstallation</h3>
 
-</p>
-<p>
-  
-<img src="" alt=""/>
+- Now lets cleanup, we dont want to leave our VM's running as it would cost us money to do so.
+      - Once done with the VM's and youre ready to end the day or delete them forever, follow [this tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines?tab=readme-ov-file#cleanupexiting-the-vm) to delete everything so Azure does not keep charging you.
+
 </p>
 <br />
