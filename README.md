@@ -156,7 +156,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 
 - Begin by creating a filter for rdp (tcp.port == 3389)
-    - Observe rdp traffic with Wireshark
+     - Observe rdp traffic with Wireshark
           - There should be consistent traffic since we are currently using the remote desktop protocol to do this whole project in the first place.
 <img src="https://i.imgur.com/6AL8Toc.png" alt="rdp Traffic"/>
 
