@@ -168,7 +168,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 
 - Now lets cleanup, we dont want to leave our VM's running as it would cost us money to do so.
-      - Once done with the VM's and youre ready to end the day or delete them forever, follow [this tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines?tab=readme-ov-file#cleanupexiting-the-vm) to delete everything so Azure does not keep charging you.
+     - Once done with the VM's and youre ready to end the day or delete them forever, follow [this tutorial](https://github.com/MatthewThompsonIT/creating-virtual-machines?tab=readme-ov-file#cleanupexiting-the-vm) to delete everything so Azure does not keep charging you.
 
 </p>
 <br />
